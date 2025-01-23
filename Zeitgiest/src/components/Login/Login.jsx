@@ -43,11 +43,6 @@ const Login = () => {
         </div>
         <div className="text">Log In</div>
       </button>
-      <div className="credits">
-        <a href="https://codepen.io/marko-zub/" target="_blank" rel="noopener noreferrer">
-          My other codepens
-        </a>
-      </div>
     </form>
   );
 };

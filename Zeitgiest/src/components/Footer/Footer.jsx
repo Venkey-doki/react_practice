@@ -31,7 +31,12 @@ const Footer = () => {
           <div className="col-12 col-md-3 mb-3">
             <h4>Contact Us</h4>
             <p><a href="mailto:zeitgeist2k25@gmail.com" className="text-white text-decoration-none hover-gray">Email: zeitgeist2k25@gmail.com</a></p>
-            <p>Phone: +123 456 789</p>
+            <p>D.BHARGAV - 8317504292</p>
+            <p>T.VIVEK - 7799002247</p>
+            <p>B.LIKITH - 7569801239</p>
+            <p>S.MANJUNADH - 8143224017</p>
+            <p>B.NAVANEENTHA - 7989425914</p>
+            <p>K.SATYA ESWARI - 701690151</p>
           </div>
           <div className="col-12 col-md-3 mb-3">
             <h4>Follow Us</h4>

@@ -1,112 +1,121 @@
-import React from "react";
-
-
-
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
+import p1 from "../../assets/1000255470-removebg-preview.png";
+import { Link } from "react-router-dom";
 function Workshop() {
-    return (
-        <>
-        <section className="w-100 vh-100"> {/* Added vh-100 for full height */}
-            <div className="text-white py-5 h-100 bg-gradient" style={{ backgroundColor: 'black' }}>
-                <div className="container-fluid h-100">
-                    <div className="row align-items-center h-100">
-                        <div className="col-lg-4 p-4">
-                            <h1 className="heading-lg text-warning">TechFest</h1>
-                            <h2 className="heading-md mb-2">Space : The Timeless Infinity</h2>
-                            <p className="paragraph mb-4">Explore your favourite events and 
-                                register now to showcase your talent and win exciting prizes.</p>
-                            <a href="#" 
-                                className="btn btn-outline-warning">
-                                Explore Now</a>
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="d-flex flex-wrap align-items-center justify-content-around">
-                                <div>
-                                    <img className="mt-5 d-none d-xl-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-4 mt-md-0 p-4 p-md-0" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-5 d-none d-lg-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  useEffect(() => {
+    AOS.init({
+      duration: 1000, // Animation duration
+      once: true, // Only animate once
+    });
+  }, []);
+
+  return (
+    <div
+    id="Workshop"
+      style={{
+        backgroundColor: "black",
+        background: "linear-gradient(to right, #000000 0%, #2c2b2b 100%)",
+      }}
+    >
+      {/* Section */}
+      <section
+        className="w-100"
+        style={{
+          backgroundColor: "black",
+          background: "linear-gradient(to right, #000000 0%, #2c2b2b 100%)",
+        }}
+      >
+        <div className="text-white py-5">
+          <div className="container-fluid">
+            <div className="row d-flex align-items-center">
+              {/* Image Section */}
+              <div
+                className="col-md-6 order-1 order-md-2 d-flex justify-content-center"
+                data-aos="fade-down"
+                style={{ overflow: "hidden" }}
+              >
+                <img
+                  src={p1}
+                  alt="Workshop Visual"
+                  className="img-fluid"
+                  style={{
+                    maxWidth: "90%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+
+              {/* Text Section */}
+              <div
+                className="col-md-6 order-2 order-md-1 text-center text-md-start"
+                data-aos="fade-up"
+              >
+                <h1 className="display-4 text-warning">TechFest</h1>
+                <h2 className="h4 mb-3">GEN AI</h2>
+                <p className="lead">
+                  Join our GenAI Workshop to explore the exciting world of
+                  Generative AI! Learn how cutting-edge technologies like GPT
+                  and diffusion models create art, text, and more. Through
+                  hands-on sessions, you'll build projects and gain practical
+                  skills in AI tools and applications. Perfect for enthusiasts
+                  and professionals eager to innovate with AI.
+                </p>
+                <a href="/workshop/genai" className="btn btn-outline-warning">
+                  Explore Now
+                </a>
+              </div>
+              
             </div>
-        </section>
-        <section className="w-100 vh-100"> {/* Added vh-100 for full height */}
-            <div className="text-white py-5 h-100" style={{ backgroundColor: 'black' }}>
-                <div className="container-fluid h-100">
-                    <div className="row align-items-center h-100">
-                        <div className="col-lg-8">
-                            <div className="d-flex flex-wrap align-items-center justify-content-around">
-                                <div>
-                                    <img className="mt-5 d-none d-xl-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-4 mt-md-0 p-4 p-md-0" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-5 d-none d-lg-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"/>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-lg-4 p-4">
-                            <h1 className="heading-lg text-warning">TechFest</h1>
-                            <h2 className="heading-md mb-2">Space : The Timeless Infinity</h2>
-                            <p className="paragraph mb-4">Explore your favourite events and 
-                                register now to showcase your talent and win exciting prizes.</p>
-                            <a href="#" 
-                                className="btn btn-outline-warning">
-                                Explore Now</a>
-                        </div>
-                    </div>
-                </div>
+          </div>
+        </div>
+        <div className="text-white py-5">
+          <div className="container-fluid">
+            <div className="row d-flex align-items-center">
+              {/* Image Section */}
+              <div
+                className="col-md-6 order-1 order-md-2 d-flex justify-content-center"
+                data-aos="fade-down"
+                style={{ overflow: "hidden" }}
+              >
+                <img
+                  src={p1}
+                  alt="Workshop Visual"
+                  className="img-fluid"
+                  style={{
+                    maxWidth: "90%",
+                    height: "auto",
+                  }}
+                />
+              </div>
+
+              {/* Text Section */}
+              <div
+                className="col-md-6 order-2 order-md-1 text-center text-md-start"
+                data-aos="fade-up"
+              >
+                <h1 className="display-4 text-warning">TechFest</h1>
+                <h2 className="h4 mb-3">GEN AI</h2>
+                <p className="lead">
+                  Join our GenAI Workshop to explore the exciting world of
+                  Generative AI! Learn how cutting-edge technologies like GPT
+                  and diffusion models create art, text, and more. Through
+                  hands-on sessions, you'll build projects and gain practical
+                  skills in AI tools and applications. Perfect for enthusiasts
+                  and professionals eager to innovate with AI.
+                </p>
+                <Link to="/workshop/GenAI" className="btn btn-outline-warning">
+                  Explore Now
+                </Link>
+              </div>
+              
             </div>
-        </section>
-        <section className="w-100 vh-100"> {/* Added vh-100 for full height */}
-            <div className=" text-white py-5 h-100" style={{ backgroundColor: 'black' }}>
-                <div className="container-fluid h-100">
-                    <div className="row align-items-center h-100">
-                        <div className="col-lg-4 p-4">
-                            <h1 className="heading-lg text-warning">TechFest</h1>
-                            <h2 className="heading-md mb-2">Space : The Timeless Infinity</h2>
-                            <p className="paragraph mb-4">Explore your favourite events and 
-                                register now to showcase your talent and win exciting prizes.</p>
-                            <a href="#" 
-                                className="btn btn-outline-warning">
-                                Explore Now</a>
-                        </div>
-                        <div className="col-lg-8">
-                            <div className="d-flex flex-wrap align-items-center justify-content-around">
-                                <div>
-                                    <img className="mt-5 d-none d-xl-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969935-c13d5b00-acd4-11eb-82b1-5ad2ff10fb76.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-4 mt-md-0 p-4 p-md-0" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969931-bedb0100-acd4-11eb-99a9-ff5e0ee9f31f.png"/>
-                                </div>
-                                <div>
-                                    <img className="mt-5 d-none d-lg-inline-block" 
-                                        src="https://user-images.githubusercontent.com/54521023/116969939-c1d5f180-acd4-11eb-8ad4-9ab9143bdb50.png"/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        </>
-    )
+          </div>
+        </div>
+      </section>
+    </div>
+  );
 }
 
 export default Workshop;

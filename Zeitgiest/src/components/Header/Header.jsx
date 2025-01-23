@@ -14,11 +14,11 @@ export default function Header() {
                     <h3 className="navbar-brand mt-2 ms-2" href="#">Zeitgeist'25</h3>
                 </div>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon "></span>
                     </button>
                     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
                         <div class="offcanvas-header">
-                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+                            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ZeitGeist</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
                         <div class="offcanvas-body">
@@ -32,12 +32,12 @@ export default function Header() {
                                     <li><Link to="/onlineEvents" className="dropdown-item">Oline Events</Link></li>
                                 </ul>
                             </li>
-                            <li className="nav-item"><Link to="/workshop" className="nav-link">Workshop</Link></li>
+                            <li className="nav-item"><Link to="/Workshop" className="nav-link">Workshop</Link></li>
                             <li className="nav-item"><Link to="/contests" className="nav-link">Contests</Link></li>
-                            <li className="nav-item"><Link to="/accommodation" className="nav-link">Accommodation</Link></li>
+                            <li className="nav-item"><Link to="/Accommodation" className="nav-link">Accommodation</Link></li>
                             <li className="nav-item"><Link to="/sponsors" className="nav-link">Sponsors</Link></li>
                             <li className="nav-item"><Link to="/gallery" className="nav-link">Gallery</Link></li>
-                            <li className="nav-item"><Link to="/contact" className="nav-link">Contact Us</Link></li>
+                            <li className="nav-item"><Link to="/Team" className="nav-link">Team</Link></li>
                             <li className="nav-item"><Link to="/login" className="nav-link">Login</Link></li>
                             </ul>
                            

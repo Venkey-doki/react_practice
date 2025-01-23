@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import "./Contests.css";
 
 const cardData = [
@@ -61,27 +63,32 @@ const cardData = [
 ];
 
 function Contests() {
+  useEffect(() => {
+    AOS.init({ duration: 1000, once: true }); // Initialize AOS with animation duration and settings
+  }, []);
+
   return (
-    <main>
-      <div className="grid-container">
-        {cardData.map((card) => (
-          <div className="card" key={card.id}>
+      <div id="Contests" className="grid-container">
+        {cardData.map((card, index) => (
+          <div
+            className="card"
+            key={card.id}
+            data-aos={index % 2 === 0 ? "fade-up" : "fade-down"} // Alternate animations for variety
+          >
             <img src={card.image} alt={card.heading} />
             <div className="card-content">
               <h2>{card.heading}</h2>
               <p>{card.description}</p>
-              <a href="#" class="button">
-                    Find out more 
-                    <span class="material-symbols-outlined">
-                    arrow_right_alt
-                    </span>
-                </a>
-
-            </div>  
+              <a href="#" className="button">
+                Find out more
+                <span className="material-symbols-outlined">
+                  arrow_right_alt
+                </span>
+              </a>
+            </div>
           </div>
         ))}
       </div>
-    </main>
   );
 }
 

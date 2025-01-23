@@ -8,6 +8,9 @@ import About from './components/About/About'
 import Contact from './components/Contact/Contact.jsx'
 import User from './components/User/User.jsx'
 import Gitinfo, { getGitinfo } from './components/Gitinfo/Gitinfo.jsx'
+import Workshop from './components/Workshops/Workshop.jsx'
+import WorkshopInfo from './components/WorkshopInfo/WorkshopInfo.jsx'
+import Login from './components/Login/Login.jsx'
 
 // const router = createBrowserRouter([
 //   {
@@ -37,6 +40,9 @@ const router = createBrowserRouter(
         <Route path='contact' element={<Contact />} />
         <Route path='user/:userid' element={<User />} />
         <Route path="Gitinfo" element={<Gitinfo />} loader={getGitinfo} />
+        <Route path='Workshop' element={<Workshop />} />
+        <Route path='Workshop/WorkshopInfo' element={<WorkshopInfo />} />
+        <Route path='Login' element={<Login/>} />
     </Route>
   )
 )

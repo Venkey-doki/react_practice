@@ -1,8 +1,5 @@
 import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "./Gallery.css"; // Your custom CSS
+import "./Gallery.css";
 
 import mainEntrance from "../../assets/JNTUK main entrance.jpg";
 import nehruStatue from "../../assets/nehru statue_3.jpg";
@@ -32,48 +29,19 @@ const galleryImages = [
   { id: 12, src: gym, place: "JNTUK GYM" },
 ];
 
-const Gallery = () => {
-  const mainSliderSettings = {
-    vertical: true,
-    verticalSwiping: true,
-    arrows: false,
-    infinite: true,
-    dots: true,
-    speed: 1000,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-  };
-
-  const textSliderSettings = {
-    vertical: true,
-    arrows: false,
-    infinite: true,
-    swipe: false,
-    speed: 900,
-    cssEase: "cubic-bezier(0.7, 0, 0.3, 1)",
-  };
-
+function Gallery1() {
   return (
-    <div className="split-slideshow">
-      <div className="slideshow slideshow-left">
-        <Slider {...mainSliderSettings}>
-          {galleryImages.map((image) => (
-            <div className="item" key={image.id}>
-              <img src={image.src} alt={image.place} />
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <div className="slideshow-text">
-        <Slider {...textSliderSettings}>
-          {galleryImages.map((image) => (
-            <div className="item" key={image.id}>
-              {image.place}
-            </div>
-          ))}
-        </Slider>
-      </div>
+    <div id="Gallery" className="gallery-container">
+      {galleryImages.map((image) => (
+        <div className="gallery-item" key={image.id}>
+          <img src={image.src} alt={image.place} />
+          <div className="overlay">
+            <span>{image.place}</span>
+          </div>
+        </div>
+      ))}
     </div>
   );
-};
+}
 
-export default Gallery;
+export default Gallery1;
