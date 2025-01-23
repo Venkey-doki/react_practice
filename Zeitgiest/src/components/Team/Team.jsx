@@ -3,10 +3,11 @@ import styles from './Team.module.css'; // Import the CSS Module
 
 const coordinators = [
   { name: "D. Bhargav", contact: "8317504000" },
-  { name: "M. Karthik", contact: "9704776000" },
+  { name: "S. Manjunadh", contact: "8143224017" },
   { name: "K. Prasanna", contact: "9392454000" },
   { name: "T. Vivek", contact: "7799002000" },
-  { name: "P. Manikanta", contact: "9390159000" },
+  { name: "B. Likhith", contact: "7569801239" },
+  { name: "B.Navaneetha", contact: "7989425914" },
   // Add more coordinators if needed
 ];
 
